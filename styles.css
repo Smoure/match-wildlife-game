@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "luckiestguy";
+    src: url("Assets/Fonts/luckiestguy.woff") format("woff"), url("Assets/Fonts/luckiestguy.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "indieflower";
+    src: url("Assets/Fonts/indieflower.woff") format("woff"), url("Assets/Fonts/indieflower.woff2") format("woff2")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#ADD8E6, #00008B);
+}
+
+.page-title {
+    color: #20B2AA;
+    font-family: luckiestguy, serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    color: #66CDAA;
+    font-family: indieflower, serif;
+    font-size: 4em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border-color: #20B2AA;
+    height: 175px;
+    width: 125px;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+/* .card-back {
+    background-color: white;
+    border-color: #20B2AA;
+} */
+
+.card-front {
+    transform: rotateX(180deg);
+}
+
+.palm {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+/* .card-back:hover .palm {
+    width: 52px;
+    height: 52px;
+} */
+
+.palm-top-left {
+    transform: rotate(180deg);
+    top: 0;
+    left: 0;
+}
+
+.palm-top-right {
+    transform: rotate(270deg);
+    top: 0;
+    right: 0;
+}
+
+.palm-bottom-left {
+    transform: rotate(90deg);
+    bottom: 0;
+    left: 0;
+}
+
+.palm-bottom-right {
+    /* transform: rotate(90deg); */
+    bottom: 0;
+    right: 0;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+
+}
