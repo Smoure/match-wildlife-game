@@ -69,14 +69,25 @@ body {
     border-radius: 12px;
     border-width: 1px;
     border-style: solid;
+    
 }
 
-/* .card-back {
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
+
+.card-back {
     background-color: white;
-    border-color: #20B2AA;
-} */
+    border-color: #00008B;
+}
 
 .card-front {
+    background-color: white;
+    border-color: #00008B;
     transform: rotateX(180deg);
 }
 
@@ -84,10 +95,10 @@ body {
     position: absolute;
     width: 47px;
     height: 47px;
-    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+    /* transition: width 100ms ease-in-out, height 100ms ease-in-out; */
 }
 
-/* .card-back:hover .palm {
+/* .card-back:hover .logo {
     width: 52px;
     height: 52px;
 } */
@@ -111,12 +122,12 @@ body {
 }
 
 .palm-bottom-right {
-    /* transform: rotate(90deg); */
     bottom: 0;
     right: 0;
 }
 
 .logo {
+    /* transition: transform 100ms ease-in-out; */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -124,5 +135,4 @@ body {
     margin-bottom: 30px;
     width: 100px;
     height: 100px;
-
 }
